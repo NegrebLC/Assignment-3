@@ -67,6 +67,38 @@ article p {
     width: 100%;
 }
 
+[data-role="collapsible"] {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 15px;
+}
+
+[data-role="collapsible"] h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+[data-role="collapsible"] p {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+[data-role="collapsible-set"] {
+    border: 1px solid #ddd;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+[data-role="collapsible-set"] [data-role="collapsible"] {
+    border-top: 1px solid #ddd;
+}
+
+[data-role="collapsible-set"] [data-role="collapsible"]:first-child {
+    border-top: none;
+}
+
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 600px) {
     header {
