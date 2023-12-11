@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CPRO 1102 Assignment 3 Question 1</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+        <link rel="stylesheet" href="q1styles.css">
+    
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="q1scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="blogTitle">Pawesome Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="q2.html">Question 2</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#pet-services">Pet Services</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="blog">
+                <h2>Welcome to the Meown/Pawesome Blog!</h2>
+                <article>
+                    <h3>Do Dogs Know Their Name?</h3>
+                    <p>It's a common question among pet owners. Many believe that dogs recognize their names. Studies suggest...</p>
+                </article>
+    
+                <article>
+                    <h3>Essential Tips to Raise Healthy Pets</h3>
+                    <p>Raising a healthy pet involves various aspects such as diet, exercise, grooming, and mental stimulation. Here are some tips...</p>
+                </article>
+    
+                <article>
+                    <h3>Why Does My Dog Attack Me?</h3>
+                    <p>Aggression in pets can be triggered by various factors including fear, territorial behavior, pain, or illness. Understanding...</p>
+                </article>
+    
+                <article>
+                    <h3>How to Throw a Birthday Party for Your Dog</h3>
+                    <p>Celebrating your pet's birthday can be a fun and memorable event. Here are some creative ideas and tips for throwing a memorable...</p>
+                </article>
+            </section>
+    
+            <section id="contact" style="display: none;">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>Email: example@example.com</li>
+                    <li>Mailing Address: 1234 Pet Street, City</li>
+                    <li>Phone Number: 123-456-7890</li>
+                </ul>
+                <div id="map"></div>
+                <button id="backButton">Back to Blog</button>
+            </section>
+
+            <!-- New section for Pet Services -->
+            <section id="pet-services" style="display: none;">
+                <h2>Pet Services</h2>
+                <div class="ui-content">
+                    <!-- Grid for Grooming -->
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <h3>Grooming Service 1</h3>
+                            <p>Description of grooming service 1...</p>
+                        </div>
+                        <div class="ui-block-b">
+                            <h3>Grooming Service 2</h3>
+                            <p>Description of grooming service 2...</p>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b">
+                        <div class="ui-block-c">
+                            <h3>Grooming Service 3</h3>
+                            <p>Description of grooming service 3...</p>
+                        </div>
+                        <div class="ui-block-d">
+                            <h3>Grooming Service 4</h3>
+                            <p>Description of grooming service 4...</p>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible content block for Pets Hotel -->
+                    <div data-role="collapsible">
+                        <h3>Pets Hotel</h3>
+                        <p>Information about Pets Hotel...</p>
+                    </div>
+
+                    <!-- Collapsible set for Pet Day Camp -->
+                    <div data-role="collapsible-set">
+                        <div data-role="collapsible">
+                            <h3>Day Camp Option 1</h3>
+                            <p>Description of Day Camp option 1...</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3>Day Camp Option 2</h3>
+                            <p>Description of Day Camp option 2...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
