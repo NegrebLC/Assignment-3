@@ -35,10 +35,22 @@ $(document).ready(function() {
         fetch('data.xml')
             .then(response => response.text())
             .then(data => {
-                let xmlDataElement = $("#xmlData");
-                xmlDataElement.html("<h3>XML Data:</h3><pre>" + data + "</pre>");
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, 'text/xml');
+                const people = xmlDoc.getElementsByTagName('person');
+                const list = document.getElementById('xmlPeopleList');
+
+                for (let person of people) {
+                    const name = person.getElementsByTagName('name')[0].textContent;
+                    const age = person.getElementsByTagName('age')[0].textContent;
+                    const city = person.getElementsByTagName('city')[0].textContent;
+
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${name}, Age: ${age}, City: ${city}`;
+                    list.appendChild(listItem);
+                }
             })
-            .catch(error => console.log(error));
+            .catch(error => console.error('Error fetching XML:', error));
     }
 
     // Function to fetch and display JSON data
@@ -46,9 +58,14 @@ $(document).ready(function() {
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
-                let jsonDataElement = $("#jsonData");
-                jsonDataElement.html("<h3>JSON Data:</h3><pre>" + JSON.stringify(data, null, 2) + "</pre>");
+                const list = document.getElementById('jsonPeopleList');
+
+                data.forEach(person => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${person.name}, Age: ${person.age}, City: ${person.city}`;
+                    list.appendChild(listItem);
+                });
             })
-            .catch(error => console.log(error));
+            .catch(error => console.error('Error fetching JSON:', error));
     }
 });
